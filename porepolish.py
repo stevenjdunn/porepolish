@@ -8,7 +8,7 @@ import sys
 import re
 
 # Version
-_version_ = "0.1"
+_version_ = "0.1.1"
 
 # Argparse argument setup
 parser = argparse.ArgumentParser(description="Hands free iterative assembly polishing with Illumina reads using Pilon")
@@ -25,19 +25,6 @@ class colours:
     invoking = '\033[93m'
     bold = '\033[1m'
     term = '\033[0m'
-
-# Logger set up
-ansi_rm = re.compile(r'\x1b\[[0-9;]*m')
-class Logger(object):
-    def __init__(self):
-        self.terminal = sys.stdout
-        self.log = open("porepolish.log", "w")
-
-    def write(self, message):
-        self.terminal.write(message)
-        self.log.write(re.sub(ansi_rm, '', message))
-
-sys.stdout = Logger()
 
 # Welcome
 print('')
