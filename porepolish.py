@@ -8,7 +8,7 @@ import sys
 import re
 
 # Version
-_version_ = "0.1.1"
+_version_ = "0.1.2"
 
 # Argparse argument setup
 parser = argparse.ArgumentParser(description="Hands free iterative assembly polishing with Illumina reads using Pilon")
@@ -48,7 +48,7 @@ fasta_in = args.input
 read_1 = args.pe1
 read_2 = args.pe2
 outdir = output + '/'
-prefix = fasta_in.replace('.fasta','')
+prefix = os.path.basename(fasta_in).replace('.fasta','')
 round_one = outdir + prefix + '_R1'
 round_two = outdir + prefix + '_R2'
 round_three = outdir + prefix + '_R3'
