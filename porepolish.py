@@ -83,6 +83,10 @@ removal = [invoked_from + '/' + x for x in intermediates]
 def goodbye():
     print('Done!','\n')
     print('Author: www.github.com/stevenjdunn','\n','\n')
+    print('')
+    print('Want to remove the _pilon tags from assembly headers?')
+    print('Use sed -i 's/_pilon//g' yourfile.fasta')
+    print('')
     print(colours.bold)
     print('#########')
     print('Finished!')
