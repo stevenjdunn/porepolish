@@ -19,8 +19,8 @@
     optional arguments:
       -h, --help            show this help message and exit
       -i INPUT, --input INPUT
-                            Runs unicycler in conservative mode
-      -1 PE1, --pe1 PE1     Runs unicycler in bold mode
+                            
+      -1 PE1, --pe1 PE1     
       -2 PE2, --pe2 PE2     Removes intermediate files
       -o OUTPUT, --output OUTPUT
 
